@@ -1,12 +1,10 @@
 <template>
-  <div class="dashboard-editor-container">
-    <panel-group @handleSetLineChartData="handleSetLineChartData" />
-
+  <div>
     <el-row
       style="background: #fff; padding: 16px 16px 0; margin-bottom: 32px;"
     >
+      <h2>{{ name }}</h2>
       <div id="c1" />
-      {{ name }}
     </el-row>
 
     <el-row :gutter="32">
@@ -92,7 +90,7 @@ export default {
     renderChart() {
       const chart = new Chart({
         container: 'c1',
-        width: 1800,
+        width: 800,
         height: 300
       })
 
